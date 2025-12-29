@@ -14,5 +14,9 @@ async def on_ready():
 @bot.command()
 async def teste(ctx):
     await ctx.send("✅ Comando de teste funcionando!")
-
+    
+@bot.command()
+async def say(ctx, *, mensagem):
+    await ctx.send(mensagem)
+    
 bot.run(os.getenv("TOKEN"))
